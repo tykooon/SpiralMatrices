@@ -1,4 +1,4 @@
-﻿namespace SpiralBase;
+﻿namespace SpiralMatrices.Core;
 
 public abstract class SpiralMatrixBase
 {
