@@ -20,9 +20,9 @@ public abstract class SpiralMatrixBase
 
     protected void CheckIndices(int i, int j)
     {
-        if (i < 0 || j < 0 || i >= _rows || j >= _cols)
+        if (i < 1 || j < 1 || i > _rows || j > _cols)
         {
-            throw new ArgumentOutOfRangeException("wrong indices");
+            throw new ArgumentOutOfRangeException($"{nameof(i)}, {nameof(j)}");
         }
     }
 }

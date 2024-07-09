@@ -8,11 +8,24 @@ public static class SpiralMatricesExtensions
     {
         for (var i = 1; i < matrix.Rows+1; i++)
         {
-            for(var j = 1; j < matrix.Cols+1; j++)
-            {
-                Console.Write("{0,5:D}", matrix[i, j]);
-            }
-            Console.WriteLine();
+            matrix.PrintRow(i);
+        }
+    }
+
+    public static void PrintRow(this SpiralMatrixBase matrix, int row)
+    {
+        for (var j = 1; j < matrix.Cols + 1; j++)
+        {
+            Console.Write("{0,5:D}", matrix[row, j]);
+        }
+        Console.WriteLine();
+    }
+
+    public static void PrintColumn(this SpiralMatrixBase matrix, int column)
+    {
+        for (var i = 1; i < matrix.Rows + 1; i++)
+        {
+            Console.WriteLine("{0,5:D}", matrix[i, column]);
         }
     }
 }
